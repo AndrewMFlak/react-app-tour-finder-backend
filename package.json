@@ -1,0 +1,36 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "debug": "concurrently \"node --inspect-brk=43240 server.js\" \"npm run client\"",
+    "start": "if-env NODE_ENV=production && npm run server || npm run start:dev",
+    "server": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "seed": "node scripts/seedDB.js",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "google-map-react": "^1.0.5",
+    "google-maps-react": "^2.0.2",
+    "mongoose": "^4.11.7",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.1.2",
+    "prop-types":"15.5.6"
+
+  }
+}
