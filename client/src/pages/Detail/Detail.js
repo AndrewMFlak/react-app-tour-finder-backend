@@ -4,8 +4,9 @@ import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-// import MapContainer from "../../components/MapContainer";
-// import GoogleAPI from "../../utils/GoogleAPI";
+import GoogleMapsContainer from "../../components/GoogleMapsContainer";
+
+
 
 class Detail extends React.Component {
   constructor(props) {
@@ -80,7 +81,7 @@ class Detail extends React.Component {
           <Link to="/">← Back to Authors</Link>
         </Col>
       </Row>
-      {/* <MapContainer /> */}
+      <GoogleMapsContainer />
     </Container>
   );
 
